@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='queue/v1/manager.proto',
   package='fm.queue.v1',
   syntax='proto3',
-  serialized_pb=_b('\n\x16queue/v1/manager.proto\x12\x0b\x66m.queue.v1\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1cproviders/v1/providers.proto\"Z\n\nPutRequest\x12+\n\x08provider\x18\x01 \x01(\x0e\x32\x19.fm.providers.v1.Provider\x12\x0f\n\x07trackId\x18\x02 \x01(\t\x12\x0e\n\x06userId\x18\x03 \x01(\t\"8\n\x0bPutResponse\x12)\n\tqueueItem\x18\x01 \x01(\x0b\x32\x16.fm.queue.v1.QueueItem\"8\n\x0bPopResponse\x12)\n\tqueueItem\x18\x01 \x01(\x0b\x32\x16.fm.queue.v1.QueueItem\"9\n\x0cNextResponse\x12)\n\tqueueItem\x18\x01 \x01(\x0b\x32\x16.fm.queue.v1.QueueItem\"\x1e\n\rCountResponse\x12\r\n\x05\x63ount\x18\x01 \x01(\x03\"-\n\x0cQueueRequest\x12\r\n\x05limit\x18\x01 \x01(\x03\x12\x0e\n\x06offset\x18\x02 \x01(\x03\"e\n\tQueueItem\x12\n\n\x02id\x18\x01 \x01(\t\x12+\n\x07\x63reated\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0f\n\x07trackId\x18\x03 \x01(\t\x12\x0e\n\x06userId\x18\x04 \x01(\t\"\x1b\n\rDeleteRequest\x12\n\n\x02id\x18\x01 \x01(\t2\x81\x03\n\x0cQueueManager\x12:\n\x03Put\x12\x17.fm.queue.v1.PutRequest\x1a\x18.fm.queue.v1.PutResponse\"\x00\x12;\n\x04Next\x12\x16.google.protobuf.Empty\x1a\x19.fm.queue.v1.NextResponse\"\x00\x12\x39\n\x03Pop\x12\x16.google.protobuf.Empty\x1a\x18.fm.queue.v1.PopResponse\"\x00\x12=\n\x05\x43ount\x12\x16.google.protobuf.Empty\x1a\x1a.fm.queue.v1.CountResponse\"\x00\x12>\n\x05Queue\x12\x19.fm.queue.v1.QueueRequest\x1a\x16.fm.queue.v1.QueueItem\"\x00\x30\x01\x12>\n\x06\x44\x65lete\x12\x1a.fm.queue.v1.DeleteRequest\x1a\x16.google.protobuf.Empty\"\x00\x42\x32Z0github.com/thisissoon-fm/proto.go/queue/v1;queueb\x06proto3')
+  serialized_pb=_b('\n\x16queue/v1/manager.proto\x12\x0b\x66m.queue.v1\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1cproviders/v1/providers.proto\"Z\n\nPutRequest\x12+\n\x08provider\x18\x01 \x01(\x0e\x32\x19.fm.providers.v1.Provider\x12\x0f\n\x07trackId\x18\x02 \x01(\t\x12\x0e\n\x06userId\x18\x03 \x01(\t\"9\n\x0bPutResponse\x12*\n\tqueueItem\x18\x01 \x01(\x0b\x32\x17.fm.queue.v1.QueueTrack\"9\n\x0bPopResponse\x12*\n\tqueueItem\x18\x01 \x01(\x0b\x32\x17.fm.queue.v1.QueueTrack\":\n\x0cNextResponse\x12*\n\tqueueItem\x18\x01 \x01(\x0b\x32\x17.fm.queue.v1.QueueTrack\"\x1e\n\rCountResponse\x12\r\n\x05\x63ount\x18\x01 \x01(\x03\"-\n\x0cQueueRequest\x12\r\n\x05limit\x18\x01 \x01(\x03\x12\x0e\n\x06offset\x18\x02 \x01(\x03\"f\n\nQueueTrack\x12\n\n\x02id\x18\x01 \x01(\t\x12+\n\x07\x63reated\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0f\n\x07trackId\x18\x03 \x01(\t\x12\x0e\n\x06userId\x18\x04 \x01(\t\"\x1b\n\rDeleteRequest\x12\n\n\x02id\x18\x01 \x01(\t2\x82\x03\n\x0cQueueManager\x12:\n\x03Put\x12\x17.fm.queue.v1.PutRequest\x1a\x18.fm.queue.v1.PutResponse\"\x00\x12;\n\x04Next\x12\x16.google.protobuf.Empty\x1a\x19.fm.queue.v1.NextResponse\"\x00\x12\x39\n\x03Pop\x12\x16.google.protobuf.Empty\x1a\x18.fm.queue.v1.PopResponse\"\x00\x12=\n\x05\x43ount\x12\x16.google.protobuf.Empty\x1a\x1a.fm.queue.v1.CountResponse\"\x00\x12?\n\x05Queue\x12\x19.fm.queue.v1.QueueRequest\x1a\x17.fm.queue.v1.QueueTrack\"\x00\x30\x01\x12>\n\x06\x44\x65lete\x12\x1a.fm.queue.v1.DeleteRequest\x1a\x16.google.protobuf.Empty\"\x00\x42\x32Z0github.com/thisissoon-fm/proto.go/queue/v1;queueb\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,providers_dot_v1_dot_providers__pb2.DESCRIPTOR,])
 
@@ -101,7 +101,7 @@ _PUTRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=223,
-  serialized_end=279,
+  serialized_end=280,
 )
 
 
@@ -131,8 +131,8 @@ _POPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=281,
-  serialized_end=337,
+  serialized_start=282,
+  serialized_end=339,
 )
 
 
@@ -162,8 +162,8 @@ _NEXTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=339,
-  serialized_end=396,
+  serialized_start=341,
+  serialized_end=399,
 )
 
 
@@ -193,8 +193,8 @@ _COUNTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=398,
-  serialized_end=428,
+  serialized_start=401,
+  serialized_end=431,
 )
 
 
@@ -231,41 +231,41 @@ _QUEUEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=430,
-  serialized_end=475,
+  serialized_start=433,
+  serialized_end=478,
 )
 
 
-_QUEUEITEM = _descriptor.Descriptor(
-  name='QueueItem',
-  full_name='fm.queue.v1.QueueItem',
+_QUEUETRACK = _descriptor.Descriptor(
+  name='QueueTrack',
+  full_name='fm.queue.v1.QueueTrack',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='fm.queue.v1.QueueItem.id', index=0,
+      name='id', full_name='fm.queue.v1.QueueTrack.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='created', full_name='fm.queue.v1.QueueItem.created', index=1,
+      name='created', full_name='fm.queue.v1.QueueTrack.created', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='trackId', full_name='fm.queue.v1.QueueItem.trackId', index=2,
+      name='trackId', full_name='fm.queue.v1.QueueTrack.trackId', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='userId', full_name='fm.queue.v1.QueueItem.userId', index=3,
+      name='userId', full_name='fm.queue.v1.QueueTrack.userId', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -283,8 +283,8 @@ _QUEUEITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=477,
-  serialized_end=578,
+  serialized_start=480,
+  serialized_end=582,
 )
 
 
@@ -314,22 +314,22 @@ _DELETEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=580,
-  serialized_end=607,
+  serialized_start=584,
+  serialized_end=611,
 )
 
 _PUTREQUEST.fields_by_name['provider'].enum_type = providers_dot_v1_dot_providers__pb2._PROVIDER
-_PUTRESPONSE.fields_by_name['queueItem'].message_type = _QUEUEITEM
-_POPRESPONSE.fields_by_name['queueItem'].message_type = _QUEUEITEM
-_NEXTRESPONSE.fields_by_name['queueItem'].message_type = _QUEUEITEM
-_QUEUEITEM.fields_by_name['created'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_PUTRESPONSE.fields_by_name['queueItem'].message_type = _QUEUETRACK
+_POPRESPONSE.fields_by_name['queueItem'].message_type = _QUEUETRACK
+_NEXTRESPONSE.fields_by_name['queueItem'].message_type = _QUEUETRACK
+_QUEUETRACK.fields_by_name['created'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 DESCRIPTOR.message_types_by_name['PutRequest'] = _PUTREQUEST
 DESCRIPTOR.message_types_by_name['PutResponse'] = _PUTRESPONSE
 DESCRIPTOR.message_types_by_name['PopResponse'] = _POPRESPONSE
 DESCRIPTOR.message_types_by_name['NextResponse'] = _NEXTRESPONSE
 DESCRIPTOR.message_types_by_name['CountResponse'] = _COUNTRESPONSE
 DESCRIPTOR.message_types_by_name['QueueRequest'] = _QUEUEREQUEST
-DESCRIPTOR.message_types_by_name['QueueItem'] = _QUEUEITEM
+DESCRIPTOR.message_types_by_name['QueueTrack'] = _QUEUETRACK
 DESCRIPTOR.message_types_by_name['DeleteRequest'] = _DELETEREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -375,12 +375,12 @@ QueueRequest = _reflection.GeneratedProtocolMessageType('QueueRequest', (_messag
   ))
 _sym_db.RegisterMessage(QueueRequest)
 
-QueueItem = _reflection.GeneratedProtocolMessageType('QueueItem', (_message.Message,), dict(
-  DESCRIPTOR = _QUEUEITEM,
+QueueTrack = _reflection.GeneratedProtocolMessageType('QueueTrack', (_message.Message,), dict(
+  DESCRIPTOR = _QUEUETRACK,
   __module__ = 'queue.v1.manager_pb2'
-  # @@protoc_insertion_point(class_scope:fm.queue.v1.QueueItem)
+  # @@protoc_insertion_point(class_scope:fm.queue.v1.QueueTrack)
   ))
-_sym_db.RegisterMessage(QueueItem)
+_sym_db.RegisterMessage(QueueTrack)
 
 DeleteRequest = _reflection.GeneratedProtocolMessageType('DeleteRequest', (_message.Message,), dict(
   DESCRIPTOR = _DELETEREQUEST,
@@ -399,8 +399,8 @@ _QUEUEMANAGER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=610,
-  serialized_end=995,
+  serialized_start=614,
+  serialized_end=1000,
   methods=[
   _descriptor.MethodDescriptor(
     name='Put',
@@ -444,7 +444,7 @@ _QUEUEMANAGER = _descriptor.ServiceDescriptor(
     index=4,
     containing_service=None,
     input_type=_QUEUEREQUEST,
-    output_type=_QUEUEITEM,
+    output_type=_QUEUETRACK,
     options=None,
   ),
   _descriptor.MethodDescriptor(

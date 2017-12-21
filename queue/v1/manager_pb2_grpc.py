@@ -38,7 +38,7 @@ class QueueManagerStub(object):
     self.Queue = channel.unary_stream(
         '/fm.queue.v1.QueueManager/Queue',
         request_serializer=queue_dot_v1_dot_manager__pb2.QueueRequest.SerializeToString,
-        response_deserializer=queue_dot_v1_dot_manager__pb2.QueueItem.FromString,
+        response_deserializer=queue_dot_v1_dot_manager__pb2.QueueTrack.FromString,
         )
     self.Delete = channel.unary_unary(
         '/fm.queue.v1.QueueManager/Delete',
@@ -120,7 +120,7 @@ def add_QueueManagerServicer_to_server(servicer, server):
       'Queue': grpc.unary_stream_rpc_method_handler(
           servicer.Queue,
           request_deserializer=queue_dot_v1_dot_manager__pb2.QueueRequest.FromString,
-          response_serializer=queue_dot_v1_dot_manager__pb2.QueueItem.SerializeToString,
+          response_serializer=queue_dot_v1_dot_manager__pb2.QueueTrack.SerializeToString,
       ),
       'Delete': grpc.unary_unary_rpc_method_handler(
           servicer.Delete,
